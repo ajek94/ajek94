@@ -1,0 +1,156 @@
+.boobies {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.boob1 {
+    width: 100px;
+    height: 100px;
+    background-color: #ffd5d1;
+    box-shadow: 0 1px 2px -2px rgba(0,0,0,0.31);
+    border-radius: 50%;
+    margin: 50px auto ;
+    margin-right: 5px;
+    position: relative;
+    z-index: 2;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.boob2 {
+    width: 100px;
+    height: 100px;
+    background-color: #ffd5d1;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px -2px gray;
+    margin: 50px auto;
+    margin-left: 5px;
+    position: relative;
+    z-index: 2;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    align-self: flex-start;
+}
+ @keyframes bounce{
+    0% {
+      top: 0px;
+        box-shadow: 0 1px 2px -2px rgba(0,0,0,0.31);
+    }
+    50% {
+      top: 115px;
+      width: 100px;
+      height: 120px;
+        border-radius: 50% 45% 45% 50%;
+        box-shadow: 0 10px 5px -2px rgba(0,0,0,0.31);
+    }
+    100% {
+      top: 0px;
+        box-shadow: 0 1px 2px -2px rgba(0,0,0,0.31);
+    }
+  }
+
+.nipple_skin {
+    width: 30px;
+    height: 30px;
+    background-color: #e7accf; 
+    border-radius: 50%;
+    z-index: 3;
+    position: relative;
+    top: 35%;
+    left: 35%;
+    animation-name: bounce_nip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes bounce_nip{
+    0% {
+      top: 35%;
+    }
+    50% {
+      top: 55%;
+    }
+    100% {
+      top: 35%;
+    }
+  }
+
+@keyframes bounce_nip_right{
+    0% {
+      top: 35%;
+        right: 0;
+    }
+    50% {
+      top: 55%;
+    }
+    100% {
+      top: 35%;
+        right: 25%;
+    }
+  }
+
+.nipple {
+    width: 15px;
+    height: 15px;
+    background-color: #de9dac;
+    z-index: 4;
+    border-radius: 50%;
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+.text {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    top: 30px;
+    font-family: 'Anton', sans-serif;
+    font-size: 70px;
+    color: white;
+  text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+    animation-name: bop;
+    
+}
+
+span {
+    transform: scale(0.9);
+    display: inline-block;
+  }
+  span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+  }
+  span:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+  }
+}
+
+@keyframes bop {
+  0% {
+    transform: scale(0.7);
+  }
+    50%{
+        left: 50%;
+    }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
